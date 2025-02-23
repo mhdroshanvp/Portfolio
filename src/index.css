@@ -27,7 +27,8 @@ body{
 
 b{
   font-weight: 900;
-  color: #9067C6;
+  color: #0e40ab;
+  /* color: #7567c6; */
 }
 
 /* Scrollbar */
@@ -90,7 +91,7 @@ b{
   font-size: 32px;
   letter-spacing: 2px;
   padding-left: 7%;
-  color: #9067C6;
+  color: #0e40ab;
   display: flex;
   align-items: center;
   text-align: center;
@@ -150,7 +151,7 @@ b{
     width: 100%;
   }
 
-  .NavbarLinks{
+  .NavbarLinks {
     font-size: 26px;
     display: flex;
     flex-direction: column;
@@ -158,9 +159,9 @@ b{
     position: fixed;
     inset: 0 0 0 50%;
     gap: 50px;
-    background-color:#431f47;
+    background-color: rgba(33, 31, 71, 0.5); /* Transparent background */
     height: 100vh;
-    padding-top: max(20%,120px);
+    padding-top: max(20%, 120px);
     transform: translateX(100%);
     transition: 0.5s;
   }
@@ -310,7 +311,7 @@ b{
   padding-bottom: 40px;
 }
 .AboutText a{
-  color: #9067C6;
+  color: #0e40ab;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -443,10 +444,10 @@ b{
   display: inline-flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 10%;
+  width: 20%;
   margin: 25px 3% 0;
   border-radius: 5px;
-  background-color: #431f47;
+  background-color: #0e40ab;
   color: #E7E7E7;
   height: 30px;
   cursor:pointer;
@@ -474,7 +475,7 @@ b{
   margin: 25px 0px;
   width: 200px;
   height: 40px;
-  background-color:#431f47;
+  background-color:#0e40ab;
   color: #E7E7E7;
   text-decoration: none;
   border-radius: 5px;
@@ -485,7 +486,7 @@ b{
 .downloadCV:hover{
   transition: all 0.5s;
   background-color: #E7E7E7;
-  color: #431f47;
+  color: #11337e;
 }
 
 
@@ -530,3 +531,23 @@ footer h4{
     height: 110px;
   }
 }
+
+
+
+
+
+
+/* -------------------------------------------- cursor ---------------------------------------- */
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 45px;
+  height: 45px;
+  background-image: url('../public/images/cursor.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* -------------------------------------------------------------------------------------------------- */

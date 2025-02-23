@@ -1,19 +1,21 @@
 import React from 'react';
-import Typed from "./Typed.js";
+import Typed from "./Typed.jsx";
 import Tilt from 'react-parallax-tilt';
 import Pfp from '../images/HomePfp.png';
 import {CiCoffeeCup} from "react-icons/ci";
 import Coder from '../LottieFiles/coder.json';
 import Lottie from 'lottie-react';
+import Cursor from './Cursor.jsx';
 
 
 const Home = () => {
   return (
     <div >
+      <Cursor />
       <div className='HomePage'>
 
         <div className='HomeText'>
-          <h1>Hi There!</h1>
+          <h1>Hey</h1>
           <h1>I'M <b>MUHAMMED ROSHAN VP</b></h1>
           <Typed/>   
         </div>

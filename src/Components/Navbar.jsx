@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import {AiOutlineHome} from "react-icons/ai";
 import {BsPerson, BsCodeSlash} from "react-icons/bs";
 import {CgFileDocument} from "react-icons/cg";
+import Cursor from './Cursor';
+
 
 
 const Nav = () => {
@@ -40,7 +42,8 @@ const Nav = () => {
     window.addEventListener("scroll", scrollHandler);
 
   return (
-    <nav className={navbarblur? 'Navbar blur':'Navbar'}> 
+      <nav className={navbarblur? 'Navbar blur':'Navbar'}> 
+      <Cursor />
  
         <h1 title='Reload' onClick={()=>window.location.reload(true)} className='Logo'>ROSHAN</h1>
 

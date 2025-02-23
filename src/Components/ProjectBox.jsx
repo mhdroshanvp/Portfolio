@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
 
+
 const ProjectBox = ({ projectPhoto, projectName }) => {
   const desc = {
     TindogDesc: "This website is a landing page of Tinder but for dogs.",

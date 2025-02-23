@@ -13,10 +13,13 @@ import SwiggyImage from '../images/Swiggy-clone.png';
 import TodoImage from '../images/To-do.png'; 
 import UserManagementImage from '../images/usermanagement.png';
 import peshiyo from '../images/peshiyo.png';
+import Cursor from './Cursor';
+
 
 const Projects = () => {
   return (
     <div>
+      <Cursor />
       <h1 className='projectHeading'>My <b>Projects</b></h1>
       <div className='project'>
         <ProjectBox projectPhoto={peshiyo} projectName="Peshiyo-Fragrance" />

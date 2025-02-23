@@ -4,6 +4,8 @@ import pdf from "../MUHAMMED ROSHAN VP.pdf";
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+import Cursor from './Cursor';
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 
@@ -19,6 +21,7 @@ const Resume = () => {
 
   return (
     <div className='ResumePage'>
+      <Cursor />
       <Document file={pdf} className="resumeview">
           <Page pageNumber= {1} scale={wid<700 ? ( wid>475? 0.7: 0.5): 1}/>
       </Document>

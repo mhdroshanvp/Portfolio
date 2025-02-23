@@ -1,11 +1,13 @@
 import React from 'react';
-import Skills from './Skills.js';
+import Skills from './Skills.jsx';
 import Tilt from 'react-parallax-tilt';
 import Avatar from '../images/Avatar.png';
+import Cursor from './Cursor.jsx';
 
 const About = () => {
   return (
     <>
+    <Cursor />
       <div className='AboutPage'>
         <div className='AboutText'>
           <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
