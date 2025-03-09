@@ -1,11 +1,11 @@
 import React from 'react';
 import Typed from "./Typed.jsx";
 import Tilt from 'react-parallax-tilt';
-import Pfp from '../images/HomePfp.png';
 import {CiCoffeeCup} from "react-icons/ci";
 import Coder from '../LottieFiles/coder.json';
 import Lottie from 'lottie-react';
 import Cursor from './Cursor.jsx';
+import Pfp from '../images/HomePfp.png';
 
 
 const Home = () => {
