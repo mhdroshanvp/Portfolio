@@ -9,11 +9,11 @@ import Project from "./Components/Projects";
 import MoveToTop from "./Components/MoveToTop";
 import Lottie from  "lottie-react";
 import nightsky from "./LottieFiles/night-sky.json";
-import HashLoader from "react-spinners/HashLoader";
+import ClockLoader from "react-spinners/ClockLoader";
 
 
 function App() {
-  const[Loading,SetLoading]=useState(true);
+  const[Loading,SetLoading]= useState(true);
 
   useEffect(()=>{
     SetLoading(true)
@@ -27,8 +27,8 @@ function App() {
     <>
       {Loading ? (
       <div className="loader"> 
-        <HashLoader
-          color={'#9067C6'}
+        <ClockLoader
+          color={'#1450cc'}
           loading={true}
           size={100}
           aria-label="Loading Spinner"
