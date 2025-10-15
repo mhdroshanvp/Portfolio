@@ -8,7 +8,6 @@ import Resume from "./Components/Resume";
 import Project from "./Components/Projects";
 import MoveToTop from "./Components/MoveToTop";
 import Lottie from  "lottie-react";
-import nightsky from "./LottieFiles/night-sky.json";
 import Stripes from "./LottieFiles/GIF-4.gif";
 import PacmanLoader from "react-spinners/PacmanLoader";
 

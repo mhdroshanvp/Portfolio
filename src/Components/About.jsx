@@ -1,7 +1,6 @@
 import React from 'react';
 import Skills from './Skills.jsx';
 import Tilt from 'react-parallax-tilt';
-import Pfp from '../images/roshanvpbgremove-1.png';
 import Cursor from './Cursor.jsx';
 import Programming from '../LottieFiles/Programming_Computer.json';
 import Lottie from 'lottie-react';

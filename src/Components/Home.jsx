@@ -5,7 +5,7 @@ import {CiCoffeeCup} from "react-icons/ci";
 import Coder from '../LottieFiles/coder.json';
 import Lottie from 'lottie-react';
 import Cursor from './Cursor.jsx';
-import Avatar from '../images/cute_roshan_hehe.png';
+import Avatar from '../images/cute_roshan_hehe-1.webp';
 
 
 const Home = () => {
