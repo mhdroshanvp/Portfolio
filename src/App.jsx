@@ -10,7 +10,7 @@ import MoveToTop from "./Components/MoveToTop";
 import Lottie from  "lottie-react";
 import nightsky from "./LottieFiles/night-sky.json";
 import Stripes from "./LottieFiles/GIF-4.gif";
-import ClockLoader from "react-spinners/ClockLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 
 function App() {
@@ -28,10 +28,10 @@ function App() {
     <>
       {Loading ? (
       <div className="loader"> 
-        <ClockLoader
-          color={'#1450cc'}
+        <PacmanLoader
+          color={'#ffffffff'}
           loading={true}
-          size={100}
+          size={30}
           aria-label="Loading Spinner"
           data-testid="loader"
         />
