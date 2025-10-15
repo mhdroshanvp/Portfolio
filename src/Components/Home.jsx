@@ -5,7 +5,7 @@ import {CiCoffeeCup} from "react-icons/ci";
 import Coder from '../LottieFiles/coder.json';
 import Lottie from 'lottie-react';
 import Cursor from './Cursor.jsx';
-import Pfp from '../images/HomePfp.png';
+import Avatar from '../images/cute_roshan_hehe.png';
 
 
 const Home = () => {
@@ -16,18 +16,20 @@ const Home = () => {
 
         <div className='HomeText'>
           <h1>Hey</h1>
-          <h1>I'M <b>MUHAMMED ROSHAN VP</b></h1>
+          <h1>I'm <b>Muhammed Roshan Vp</b></h1>
           <Typed/>   
         </div>
 
-        <img className="illustration" src={Pfp} alt='pfp'/>
+        <img className="illustration" src={Avatar} alt='pfp'/>
         
       </div>
 
       <div className='AboutPage'>
         <div className='AboutText'>
           <h1 className='AboutTextHeading'>Brief <b>introduction</b></h1>
-          <p>Hey! I'm MERN stack developer passionate about building impactful digital experiences. I love crafting user-friendly interfaces with React and scalable backends with Node.js and Express. I’m also exploring Next.js, Three.js, and TypeScript to level up my skills.When I’m not coding, you’ll find me sipping coffee <CiCoffeeCup style={{scale:"1.5", rotate:"15deg"}}/> and dreaming up my next project. Let’s connect and create something awesome!</p>
+          <p>
+            Hey! I'm a passionate MERN stack developer. Currently working as a Backend Developer at a service-based company, I specialize in building scalable backends using Node.js and Express, while also designing intuitive frontends with React. Let’s connect and create something awesome!
+          </p>
         </div>
         <Tilt>
             <Lottie 

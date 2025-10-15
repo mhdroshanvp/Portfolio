@@ -1,8 +1,10 @@
 import React from 'react';
 import Skills from './Skills.jsx';
 import Tilt from 'react-parallax-tilt';
-import Avatar from '../images/Avatar.png';
+import Pfp from '../images/roshanvpbgremove-1.png';
 import Cursor from './Cursor.jsx';
+import Programming from '../LottieFiles/Programming_Computer.json';
+import Lottie from 'lottie-react';
 
 const About = () => {
   return (
@@ -18,11 +20,13 @@ const About = () => {
           </p>
         </div>
 
-        <div>
           <Tilt>
-            <img className='Avatar' src={Avatar} alt="" />
+            <Lottie 
+              className="illustration-2" 
+              animationData={Programming}
+              loop={true} 
+            />
           </Tilt>
-        </div>
 
       </div>
       

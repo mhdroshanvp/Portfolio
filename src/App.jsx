@@ -9,6 +9,7 @@ import Project from "./Components/Projects";
 import MoveToTop from "./Components/MoveToTop";
 import Lottie from  "lottie-react";
 import nightsky from "./LottieFiles/night-sky.json";
+import Stripes from "./LottieFiles/GIF-4.gif";
 import ClockLoader from "react-spinners/ClockLoader";
 
 
@@ -38,9 +39,9 @@ function App() {
       ):(
       <div>
       
-      <Lottie className="bg" animationData={nightsky} loop={true} />  
-      <Lottie className="bgtwo" animationData={nightsky} loop={true} />   
-      <Lottie className="bgtemp" animationData={nightsky} loop={true} /> 
+          <img className="bg" src={Stripes} alt="background" />
+          <img className="bgtwo" src={Stripes} alt="background" />
+          <img className="bgtemp" src={Stripes} alt="background" />
 
       <Nav/>
       <MoveToTop/>
