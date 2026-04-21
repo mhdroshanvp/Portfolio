@@ -569,3 +569,172 @@ footer h4{
   z-index: -1;
   
 }
+
+/* --- NEW SECTIONS STYLING --- */
+
+/* Skills Category Styles */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 0 auto 80px;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.skill-category {
+  background: rgba(1, 17, 26, 0.4);
+  border: 1px solid rgba(117, 103, 198, 0.3);
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  border-color: #ffcf00;
+  box-shadow: 0 10px 30px rgba(67, 31, 71, 0.4);
+}
+
+.skill-category h3 {
+  font-size: 20px;
+  color: #ffcf00;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-category p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c2c1c2;
+}
+
+/* Experience Styles */
+.experience-container, .edu-cert-container {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.experience-box, .edu-box {
+  background: rgba(1, 17, 26, 0.4);
+  border-left: 4px solid #ffcf00;
+  padding: 30px;
+  border-radius: 0 12px 12px 0;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.experience-box:hover, .edu-box:hover {
+  background: rgba(1, 17, 26, 0.6);
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(67, 31, 71, 0.3);
+}
+
+.experience-box h3, .edu-box h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.experience-box h4 {
+  font-size: 16px;
+  color: #ffcf00;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.experience-box h4 span {
+  color: #c2c1c2;
+}
+
+.experience-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.experience-box ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: #E7E7E7;
+  line-height: 1.6;
+}
+
+.experience-box ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #ffcf00;
+  font-size: 18px;
+}
+
+.edu-box p {
+  color: #c2c1c2;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.cert-link {
+  display: inline-block;
+  color: #ffcf00;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  position: relative;
+}
+
+.cert-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffcf00;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cert-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Refined aesthetics & micro-interactions */
+.projectBox {
+  background: rgba(1, 17, 26, 0.3);
+  border: 1px solid rgba(96, 95, 9, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.downloadCV {
+  border: 1px solid #0e40ab;
+}
+
+.projectbtn {
+  background-color: transparent;
+  border: 1px solid #ffcf00;
+  color: #ffcf00;
+  transition: all 0.3s ease;
+}
+
+.projectbtn:hover {
+  background-color: #ffcf00;
+  color: #000;
+}
+
+/* Hide old skills container since we replaced it, if it still renders empty */
+.skills {
+  display: none;
+}

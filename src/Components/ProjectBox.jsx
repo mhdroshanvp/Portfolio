@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
-
+import { motion } from 'framer-motion';
 
 const ProjectBox = ({ projectPhoto, projectName }) => {
   const desc = {
@@ -57,6 +57,9 @@ const ProjectBox = ({ projectPhoto, projectName }) => {
     PeshiyoFragranceGithub: "https://github.com/mhdroshanvp/Peshiyo-Perfumes",
     PeshiyoFragranceWebsite: "https://peshiyo.vercel.app",
 
+    VetkoDesc: "Production platform connecting customers, barbers, and salons with geolocation-based discovery and real-time booking. Built scalable backend with dynamic slot management and real-time booking synchronization. Integrated authentication, payment gateway, and push notification systems. Automated booking lifecycle with cron-based job scheduling.",
+    VetkoGithub: "",
+    VetkoWebsite: "",
   };
 
   const githubLink = desc[projectName + 'Github'];
@@ -64,28 +67,35 @@ const ProjectBox = ({ projectPhoto, projectName }) => {
   const description = desc[projectName + 'Desc'];
 
   return (
-    <div className='projectBox'>
-    <img className='projectPhoto' src={projectPhoto} alt="Project display" />
-    <div>
-      <br />
-      <h3>{projectName}</h3>
-      <br />
-      {description}
-      <br />
-      <div className="projectLinks">
-        {githubLink && (
-          <a href={githubLink} target='_blank' rel="noopener noreferrer">
-            <button className='projectbtn'><FaGithub /></button>
-          </a>
-        )}
-        {websiteLink && (
-          <a href={websiteLink} target='_blank' rel="noopener noreferrer">
-            <button className='projectbtn'><CgWebsite /></button>
-          </a>
-        )}
+    <motion.div 
+      className='projectBox'
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ y: -10, boxShadow: "0px 15px 30px rgba(67, 31, 71, 0.6)" }}
+    >
+      <img className='projectPhoto' src={projectPhoto} alt="Project display" />
+      <div>
+        <br />
+        <h3>{projectName}</h3>
+        <br />
+        {description}
+        <br />
+        <div className="projectLinks">
+          {githubLink && (
+            <a href={githubLink} target='_blank' rel="noopener noreferrer">
+              <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className='projectbtn'><FaGithub /></motion.button>
+            </a>
+          )}
+          {websiteLink && (
+            <a href={websiteLink} target='_blank' rel="noopener noreferrer">
+              <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className='projectbtn'><CgWebsite /></motion.button>
+            </a>
+          )}
+        </div>
       </div>
-    </div>
-  </div>
+    </motion.div>
   );
 };
 

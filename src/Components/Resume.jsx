@@ -26,7 +26,7 @@ const Resume = () => {
           <Page pageNumber= {1} scale={wid<700 ? ( wid>475? 0.7: 0.5): 1}/>
       </Document>
 
-      <a href={pdf} target='_blank' download="MUHAMMED_ROSHAN_VP">
+      <a href={pdf} target='_blank' rel="noreferrer" download="MUHAMMED_ROSHAN_VP">
         <button className='downloadCV' type='button'>
           <h3><BsDownload/>&nbsp;  Download</h3>
         </button>

@@ -14,14 +14,21 @@ import TodoImage from '../images/To-do.png';
 import UserManagementImage from '../images/usermanagement.png';
 import PeshiyoImage from '../images/peshiyo.png';
 import Cursor from './Cursor';
-
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
     <div>
       <Cursor />
-      <h1 className='projectHeading'>My <b>Projects</b></h1>
+      <motion.h1 
+        className='projectHeading'
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >My <b>Projects</b></motion.h1>
       <div className='project'>
+        <ProjectBox projectPhoto={PaintContServiceImage} projectName="Vetko" />
         <ProjectBox projectPhoto={PeshiyoImage} projectName="PeshiyoFragrance" />
         <ProjectBox projectPhoto={PaintContServiceImage} projectName="PaintContService" />
         <ProjectBox projectPhoto={PaintContEcommerceImage} projectName="PaintContEcommerce" />
