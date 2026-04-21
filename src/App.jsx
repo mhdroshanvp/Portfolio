@@ -7,8 +7,6 @@ import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Project from "./Components/Projects";
 import MoveToTop from "./Components/MoveToTop";
-
-import Stripes from "./LottieFiles/GIF-4.gif";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
 
@@ -37,10 +35,8 @@ function App() {
       </div>
       ):(
       <div>
-      
-          <img className="bg" src={Stripes} alt="background" />
-          <img className="bgtwo" src={Stripes} alt="background" />
-          <img className="bgtemp" src={Stripes} alt="background" />
+        <div className="background-grid"></div>
+        <div className="gradient-mesh"></div>
 
       <Nav/>
       <MoveToTop/>

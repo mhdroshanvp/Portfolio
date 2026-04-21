@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt';
 import Coder from '../LottieFiles/coder.json';
 import Lottie from 'lottie-react';
 import Cursor from './Cursor.jsx';
-import Avatar from '../images/cute_roshan_hehe-1.webp';
+import Avatar from '../images/cute_roshan_hehe-3.png';
 import { motion } from 'framer-motion';
 
 const Home = () => {
@@ -25,15 +25,17 @@ const Home = () => {
           <Typed/>   
         </motion.div>
 
-        <motion.img 
-          className="illustration" 
-          src={Avatar} 
-          alt='pfp'
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(67, 31, 71, 0.5)" }}
-        />
+        <Tilt>
+          <motion.img 
+            className="illustration" 
+            src={Avatar} 
+            alt='pfp'
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            whileHover={{ scale: 1.05 }}
+          />
+        </Tilt>
         
       </div>
 

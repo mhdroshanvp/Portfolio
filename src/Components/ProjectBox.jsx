@@ -57,31 +57,56 @@ const ProjectBox = ({ projectPhoto, projectName }) => {
     PeshiyoFragranceGithub: "https://github.com/mhdroshanvp/Peshiyo-Perfumes",
     PeshiyoFragranceWebsite: "https://peshiyo.vercel.app",
 
-    VetkoDesc: "Production platform connecting customers, barbers, and salons with geolocation-based discovery and real-time booking. Built scalable backend with dynamic slot management and real-time booking synchronization. Integrated authentication, payment gateway, and push notification systems. Automated booking lifecycle with cron-based job scheduling.",
+    VetkoDesc: "Geolocation-based salon booking platform with real-time scheduling, scalable backend, payments, authentication, and automated booking workflows.",
     VetkoGithub: "",
     VetkoWebsite: "",
+  };
+
+  const techStacks = {
+    Tindog: ["HTML", "CSS", "Bootstrap"],
+    Clock: ["HTML", "CSS", "JS"],
+    CocaCola: ["HTML", "CSS"],
+    Netflix: ["React", "API", "CSS"],
+    NumberGuessing: ["JS", "DOM"],
+    OLX: ["React", "Firebase"],
+    PaintContEcommerce: ["React", "Node.js", "MongoDB"],
+    PaintContService: ["React", "Express", "Socket.io"],
+    Portfolio: ["React", "Framer Motion"],
+    Swiggy: ["React", "Redux"],
+    Todo: ["React", "State"],
+    UserManagement: ["MERN", "Redux", "Auth"],
+    PeshiyoFragrance: ["React", "Tailwind"],
+    Vetko: ["Node.js", "Express", "MongoDB"],
   };
 
   const githubLink = desc[projectName + 'Github'];
   const websiteLink = desc[projectName + 'Website'];
   const description = desc[projectName + 'Desc'];
+  const tags = techStacks[projectName] || ["React", "JavaScript"];
 
   return (
     <motion.div 
       className='projectBox'
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial="initial"
+      whileInView="animate"
+      whileHover="hover"
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5 }}
-      whileHover={{ y: -10, boxShadow: "0px 15px 30px rgba(67, 31, 71, 0.6)" }}
+      variants={{
+        initial: { opacity: 0, y: 50 },
+        animate: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+      }}
     >
-      <img className='projectPhoto' src={projectPhoto} alt="Project display" />
-      <div>
-        <br />
-        <h3>{projectName}</h3>
-        <br />
-        {description}
-        <br />
+      <div className="projectContent">
+        <h3 className="projectTitle">{projectName}</h3>
+        
+        <div className="projectTags">
+          {tags.map(tag => (
+            <span key={tag} className="tech-tag">{tag}</span>
+          ))}
+        </div>
+
+        <p className="projectDesc">{description}</p>
+        
         <div className="projectLinks">
           {githubLink && (
             <a href={githubLink} target='_blank' rel="noopener noreferrer">
@@ -95,6 +120,18 @@ const ProjectBox = ({ projectPhoto, projectName }) => {
           )}
         </div>
       </div>
+
+      <motion.div 
+        className="projectImagePreview"
+        variants={{
+          initial: { opacity: 0, y: 15, pointerEvents: "none" },
+          hover: { opacity: 1, y: 0, pointerEvents: "auto" }
+        }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
+        <img className='projectPhoto' src={projectPhoto} alt="Project display" />
+        <div className="imageOverlayGradient"></div>
+      </motion.div>
     </motion.div>
   );
 };
